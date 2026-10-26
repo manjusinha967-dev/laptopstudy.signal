@@ -1,0 +1,2221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yashmit Laptop | Premium Laptops, PCs & Accessories</title>
+    <meta name="description" content="Yashmit Laptop offers premium business laptops, gaming laptops, custom PCs, RAM, SSDs, accessories, online payment support, and personal tech guidance." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #06131d;
+        --bg-2: #0b1d2a;
+        --panel: rgba(14, 26, 36, 0.96);
+        --panel-2: rgba(8, 18, 27, 0.96);
+        --white: #edf8ff;
+        --muted: #bdd3e6;
+        --line: rgba(148,163,184,0.18);
+        --primary: #67e8f9;
+        --secondary: #8b5cf6;
+        --green: #6ee7b7;
+        --orange: #fbbf24;
+        --red: #f87171;
+        --shadow: 0 28px 75px rgba(2, 7, 18, 0.58);
+      }
+
+      @keyframes floatCard {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+
+      @keyframes glowPulse {
+        0%, 100% { box-shadow: 0 0 0 rgba(103,232,249,0.15); }
+        50% { box-shadow: 0 0 40px rgba(103,232,249,0.18); }
+      }
+
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(18px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes shimmer {
+        0% { transform: translateX(-30%); opacity: 0; }
+        20% { opacity: 1; }
+        100% { transform: translateX(120%); opacity: 0; }
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        color: var(--white);
+        background: linear-gradient(180deg, #050d15 0%, #0b1620 26%, #06131d 100%);
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      body::before, body::after {
+        content: "";
+        position: fixed;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        filter: blur(90px);
+        opacity: 0.18;
+        pointer-events: none;
+        z-index: 0;
+      }
+      body::before {
+        background: #67e8f9;
+        top: -150px;
+        left: -80px;
+      }
+      body::after {
+        background: #8b5cf6;
+        bottom: -120px;
+        right: -80px;
+      }
+
+      a { color: inherit; text-decoration: none; }
+      img { display: block; max-width: 100%; }
+      button, input, select, textarea { font: inherit; }
+
+      .container { width: min(1220px, calc(100% - 28px)); margin: 0 auto; }
+      .section { padding: 100px 0; }
+
+      .eyebrow {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: var(--primary);
+        margin-bottom: 12px;
+      }
+
+      h1,h2,h3,h4,h5,p { margin: 0; }
+      h1 { font-size: clamp(2.8rem, 5vw, 5.2rem); letter-spacing: -0.06em; line-height: 0.95; }
+      h2 { font-size: clamp(2.3rem, 4vw, 3.4rem); letter-spacing: -0.05em; line-height: 1.08; }
+      h3 { font-size: 1.35rem; }
+      p { color: var(--muted); line-height: 1.72; }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        padding: 14px 22px;
+        font-weight: 800;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .btn:hover { transform: translateY(-2px); }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--primary), #69a6ff);
+        color: #071922;
+        box-shadow: 0 18px 38px rgba(103, 232, 249, 0.2);
+      }
+      .btn-secondary {
+        background: transparent;
+        border-color: rgba(255,255,255,0.12);
+        color: var(--white);
+      }
+      .btn-success {
+        background: linear-gradient(135deg, var(--green), #34d399);
+        color: #071c17;
+      }
+      .btn-soft {
+        background: rgba(255,255,255,0.02);
+        border-color: var(--line);
+        color: var(--white);
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(6,19,29,0.8);
+        border-bottom: 1px solid var(--line);
+        backdrop-filter: blur(14px);
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 82px;
+        gap: 18px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 900;
+      }
+      .brand-mark {
+        width: 42px;
+        height: 42px;
+        display: grid;
+        place-items: center;
+        border-radius: 12px;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: #061922;
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        color: var(--muted);
+        font-size: 0.88rem;
+        flex-wrap: wrap;
+      }
+      .nav-links a:hover { color: var(--white); }
+
+      .luxury-strip {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 18px;
+      }
+      .strip-pill {
+        padding: 10px 16px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.025);
+        color: var(--muted);
+        font-size: 0.8rem;
+        font-weight: 700;
+      }
+
+      .brand-row {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 22px;
+      }
+      .brand-box {
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.02);
+        border-radius: 16px;
+        padding: 14px 10px;
+        text-align: center;
+        font-weight: 800;
+        color: var(--muted);
+      }
+
+      .hero { padding: 58px 0 70px; }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.08fr 0.92fr;
+        align-items: center;
+        gap: 38px;
+      }
+      .hero-copy p {
+        font-size: 1.08rem;
+        max-width: 610px;
+        margin: 22px 0 28px;
+      }
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+        max-width: 520px;
+        margin-top: 28px;
+      }
+      .stat-box {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 18px 16px;
+      }
+      .stat-box strong {
+        display: block;
+        font-size: 1.55rem;
+        margin-bottom: 6px;
+      }
+
+      .hero-visual {
+        position: relative;
+      }
+      .showcase {
+        overflow: hidden;
+        border-radius: 30px;
+        border: 1px solid rgba(255,255,255,0.08);
+        box-shadow: var(--shadow);
+        position: relative;
+        animation: glowPulse 5s ease-in-out infinite;
+      }
+      .showcase::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(103, 232, 249, 0.18), rgba(139, 92, 246, 0.08), transparent 60%);
+        z-index: 1;
+      }
+      .showcase img {
+        width: 100%;
+        height: 640px;
+        object-fit: cover;
+        transform: scale(1.03);
+        animation: floatCard 8s ease-in-out infinite;
+      }
+      .float-box {
+        position: absolute;
+        background: rgba(7, 19, 29, 0.92);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 18px;
+        padding: 14px 16px;
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(10px);
+        animation: floatCard 6s ease-in-out infinite;
+      }
+      .float-box strong { display: block; font-size: 1.2rem; }
+      .float-top { top: 22px; right: -18px; }
+      .float-bottom { left: -18px; bottom: 30px; }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 42px;
+      }
+      .section-header p {
+        max-width: 750px;
+        margin: 14px auto 0;
+      }
+
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0,1fr));
+        gap: 22px;
+      }
+      .feature-card {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        padding: 22px 20px;
+        transition: transform 0.2s ease, border-color 0.2s ease;
+      }
+      .feature-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(103, 232, 249, 0.5);
+      }
+      .feature-icon {
+        width: 54px;
+        height: 54px;
+        display: grid;
+        place-items: center;
+        font-size: 1.5rem;
+        margin-bottom: 18px;
+        border-radius: 16px;
+        background: linear-gradient(135deg, rgba(103, 232, 249, 0.12), rgba(139, 92, 246, 0.16));
+      }
+      .feature-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 18px 0 0;
+        display: grid;
+        gap: 8px;
+      }
+      .feature-card li::before {
+        content: "•";
+        color: var(--primary);
+        margin-right: 8px;
+      }
+
+      .spotlight-layout {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 26px;
+        align-items: center;
+      }
+      .spotlight-visual {
+        position: relative;
+        min-height: 480px;
+        perspective: 1200px;
+      }
+      .spotlight-visual img {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 32px;
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+        transform: rotateX(6deg) rotateY(-10deg);
+        animation: floatCard 8s ease-in-out infinite;
+      }
+      .spotlight-badge {
+        position: absolute;
+        right: 18px;
+        bottom: 18px;
+        padding: 14px 18px;
+        border-radius: 18px;
+        background: rgba(7, 19, 29, 0.85);
+        border: 1px solid var(--line);
+        backdrop-filter: blur(10px);
+      }
+      .spotlight-list {
+        display: grid;
+        gap: 18px;
+        margin-top: 18px;
+      }
+      .mini-check {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 16px 18px;
+      }
+      .mini-check span {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: rgba(103,232,249,0.15);
+        display: grid;
+        place-items: center;
+        color: var(--primary);
+        font-weight: 900;
+        flex-shrink: 0;
+      }
+
+      .trust-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 18px;
+      }
+      .trust-box {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 22px 18px;
+      }
+      .trust-box strong {
+        display: block;
+        font-size: 1.6rem;
+        margin-bottom: 8px;
+      }
+
+      .platform-strip {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 18px;
+      }
+      .platform-pill {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 9px 14px;
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      .detail-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 18px;
+      }
+      .detail-card {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        padding: 22px 18px;
+      }
+      .detail-card strong {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 1.1rem;
+      }
+      .detail-card ul {
+        margin: 12px 0 0;
+        padding-left: 18px;
+        color: var(--muted);
+        line-height: 1.8;
+      }
+
+      .compare-table-wrap {
+        overflow-x: auto;
+        margin-top: 22px;
+      }
+      .compare-table {
+        width: 100%;
+        min-width: 780px;
+        border-collapse: collapse;
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        overflow: hidden;
+      }
+      .compare-table th,
+      .compare-table td {
+        padding: 16px 18px;
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+      }
+      .compare-table th {
+        color: var(--white);
+        background: rgba(103,232,249,0.05);
+      }
+      .compare-table td {
+        color: var(--muted);
+      }
+      .support-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 18px;
+      }
+      .support-card {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        padding: 22px 18px;
+      }
+      .support-card strong {
+        display: block;
+        margin-bottom: 8px;
+      }
+      .cta-final {
+        background: linear-gradient(135deg, rgba(103,232,249,0.10), rgba(139,92,246,0.10));
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: 30px 26px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      .studio-gallery {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 22px;
+      }
+      .gallery-card {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        overflow: hidden;
+      }
+      .gallery-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .gallery-stack {
+        display: grid;
+        gap: 22px;
+      }
+      .gallery-stack .gallery-card:first-child img { height: 240px; }
+      .gallery-stack .gallery-card:last-child img { height: 240px; }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0,1fr));
+        gap: 22px;
+      }
+      .product-card {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 26px;
+        overflow: hidden;
+        transform: translateY(0);
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        animation: fadeUp 0.7s ease both;
+      }
+      .product-card:hover {
+        transform: translateY(-10px) rotateX(2deg) rotateY(-2deg);
+        border-color: rgba(103,232,249,0.42);
+        box-shadow: 0 32px 60px rgba(3, 9, 17, 0.42);
+      }
+      .product-card img {
+        width: 100%;
+        height: 238px;
+        object-fit: cover;
+        transition: transform 0.35s ease;
+      }
+      .product-card:hover img {
+        transform: scale(1.04);
+      }
+      .tilt-card {
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+      .tilt-card:hover {
+        box-shadow: 0 36px 70px rgba(2,7,18,0.45);
+      }
+      .tilt-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.14) 45%, transparent 100%);
+        transform: translateX(-120%);
+        animation: shimmer 4s ease-in-out infinite;
+        pointer-events: none;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(36px);
+        transition: opacity 0.9s ease, transform 0.9s ease;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .keynote-wrap {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 22px;
+        align-items: center;
+      }
+      .keynote-panel {
+        background: linear-gradient(135deg, rgba(103,232,249,0.08), rgba(139,92,246,0.12));
+        border: 1px solid var(--line);
+        border-radius: 30px;
+        padding: 28px 26px;
+        box-shadow: 0 24px 56px rgba(2,7,18,0.35);
+      }
+      .keynote-panel h2 {
+        font-size: clamp(2.4rem, 4vw, 4rem);
+        letter-spacing: -0.06em;
+      }
+      .mini-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 22px;
+      }
+      .mini-card {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 18px 16px;
+      }
+      .mini-card strong {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 1.1rem;
+      }
+      .feature-visual {
+        background: radial-gradient(circle at top left, rgba(103,232,249,0.12), rgba(10,18,27,0.2) 40%, rgba(12,20,32,0.9) 100%);
+        border: 1px solid var(--line);
+        border-radius: 30px;
+        overflow: hidden;
+        min-height: 420px;
+        position: relative;
+      }
+      .feature-visual img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .floating-note {
+        position: absolute;
+        right: 18px;
+        bottom: 18px;
+        padding: 16px 18px;
+        background: rgba(7, 19, 29, 0.88);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        box-shadow: var(--shadow);
+      }
+      .product-info {
+        padding: 20px 18px 22px;
+      }
+      .tag {
+        display: inline-flex;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(103, 232, 249, 0.12);
+        color: var(--primary);
+        font-weight: 800;
+        font-size: 0.7rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .product-info h3 { margin-top: 12px; margin-bottom: 8px; }
+      .meta-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        margin-top: 14px;
+      }
+      .price { font-size: 1.55rem; font-weight: 800; }
+      .specs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 14px;
+      }
+      .specs span {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 7px 9px;
+        font-size: 0.75rem;
+        color: var(--muted);
+      }
+      .product-actions {
+        display: flex;
+        gap: 10px;
+        margin-top: 18px;
+      }
+      .product-actions .btn {
+        flex: 1;
+        padding: 12px;
+      }
+
+      .deal-box {
+        background: linear-gradient(135deg, rgba(103, 232, 249, 0.12), rgba(139, 92, 246, 0.08));
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        padding: 28px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      .process-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 18px;
+      }
+      .process-card {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 22px 18px;
+      }
+      .step-number {
+        width: 38px;
+        height: 38px;
+        display: grid;
+        place-items: center;
+        border-radius: 12px;
+        margin-bottom: 16px;
+        font-weight: 800;
+        background: linear-gradient(135deg, rgba(103, 232, 249, 0.15), rgba(139, 92, 246, 0.18));
+        color: var(--primary);
+      }
+
+      .premium-banner {
+        background: linear-gradient(135deg, rgba(12,24,34,0.9), rgba(14,24,38,0.7));
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: 30px 26px;
+        display: grid;
+        gap: 18px;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 26px 56px rgba(2,7,18,0.38);
+      }
+      .banner-metrics {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+      }
+      .banner-metrics .stat-box {
+        min-width: 140px;
+        flex: 1;
+      }
+
+      .for-you {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0,1fr));
+        gap: 22px;
+      }
+      .info-card {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        padding: 24px 20px;
+      }
+      .info-card h3 { margin-bottom: 12px; }
+      .checklist {
+        display: grid;
+        margin-top: 16px;
+        gap: 10px;
+      }
+      .checklist span {
+        color: var(--muted);
+      }
+
+      .build-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0,1fr));
+        gap: 18px;
+        margin-top: 18px;
+      }
+      .build-card {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        overflow: hidden;
+      }
+      .build-card img {
+        width: 100%;
+        height: 190px;
+        object-fit: cover;
+        display: block;
+      }
+      .build-card-content {
+        padding: 18px 16px 20px;
+      }
+      .build-card-content h3 {
+        margin: 8px 0 6px;
+        font-size: 1.12rem;
+      }
+      .build-card-content p {
+        color: var(--muted);
+        line-height: 1.7;
+        margin: 0;
+      }
+      .build-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 12px;
+      }
+      .build-tags span {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 6px 8px;
+        font-size: 0.72rem;
+        color: var(--muted);
+      }
+
+      .agent-box {
+        display: grid;
+        grid-template-columns: 1fr 0.9fr;
+        gap: 22px;
+        align-items: center;
+      }
+      .agent-card {
+        background: linear-gradient(135deg, rgba(103,232,249,0.08), rgba(139,92,246,0.08));
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: 28px 24px;
+      }
+      .agent-card p { margin: 16px 0 20px; }
+      .agent-meta {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-top: 18px;
+      }
+      .avatar {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: #071922;
+      }
+      .advisor-layout {
+        display: grid;
+        grid-template-columns: 0.95fr 1.05fr;
+        gap: 22px;
+        align-items: stretch;
+      }
+      .advisor-visual {
+        position: relative;
+        overflow: hidden;
+        padding: 0;
+        min-height: 420px;
+        background: rgba(255,255,255,0.02);
+      }
+      .advisor-visual img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .advisor-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+      }
+      .advisor-badges span {
+        padding: 8px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        color: var(--muted);
+        background: rgba(255,255,255,0.02);
+        font-weight: 700;
+        font-size: 0.76rem;
+      }
+      .advisor-points {
+        display: grid;
+        gap: 14px;
+        margin-top: 18px;
+      }
+      .advisor-point {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 16px 18px;
+      }
+      .advisor-point strong {
+        display: block;
+        margin-bottom: 8px;
+      }
+      .advisor-point p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .order-layout {
+        display: grid;
+        grid-template-columns: 1.08fr 0.92fr;
+        gap: 24px;
+      }
+      .panel {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 26px;
+        padding: 24px 22px;
+      }
+      .order-form {
+        display: grid;
+        gap: 16px;
+      }
+      .field-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+      .field {
+        display: grid;
+        gap: 8px;
+      }
+      .field label {
+        font-size: 0.86rem;
+        color: var(--muted);
+        font-weight: 600;
+      }
+      .field input, .field textarea, .field select {
+        width: 100%;
+        background: rgba(8, 18, 27, 0.9);
+        color: var(--white);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 14px;
+        padding: 13px 14px;
+        outline: none;
+      }
+      .field textarea {
+        min-height: 110px;
+        resize: vertical;
+      }
+
+      .summary-list {
+        display: grid;
+        gap: 12px;
+        margin: 18px 0;
+      }
+      .summary-item {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .summary-item:last-child { border-bottom: none; }
+      .total-row {
+        border-top: 1px solid var(--line);
+        margin-top: 14px;
+        padding-top: 18px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.15rem;
+        font-weight: 800;
+      }
+
+      .payment-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0,1fr));
+        gap: 12px;
+        margin-top: 18px;
+      }
+      .payment-option {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 14px 12px;
+        text-align: center;
+        font-weight: 700;
+        color: var(--muted);
+        cursor: pointer;
+      }
+      .payment-option.active {
+        background: rgba(103,232,249,0.08);
+        border-color: rgba(103,232,249,0.6);
+        color: var(--white);
+      }
+      .bank-box {
+        margin-top: 18px;
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 16px;
+      }
+      .bank-box p { margin-top: 8px; }
+
+      .cta-box {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        flex-wrap: wrap;
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        padding: 18px 20px;
+        background: linear-gradient(135deg, rgba(103,232,249,0.08), rgba(139,92,246,0.08));
+      }
+
+      .reviews-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0,1fr));
+        gap: 22px;
+      }
+      .review-card {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 22px 18px;
+      }
+      .stars { color: var(--orange); margin-bottom: 10px; }
+
+      .faq-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0,1fr));
+        gap: 18px;
+      }
+      .faq-item {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 20px 18px;
+      }
+      .faq-item strong { display: block; margin-bottom: 8px; }
+
+      .footer {
+        border-top: 1px solid var(--line);
+        padding: 24px 0 38px;
+      }
+      .footer-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 980px) {
+        .hero-grid, .feature-grid, .product-grid, .for-you, .agent-box, .order-layout, .reviews-grid, .faq-grid, .spotlight-layout, .studio-gallery, .trust-grid, .process-grid {
+          grid-template-columns: 1fr;
+        }
+        .feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .brand-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      }
+
+      @media (max-width: 640px) {
+        .field-row, .payment-grid, .hero-stats, .feature-grid, .brand-row { grid-template-columns: 1fr; }
+        .nav {
+          flex-direction: column;
+          justify-content: center;
+          padding: 12px 0;
+        }
+        .showcase img { height: 420px; }
+        .float-top { right: 12px; }
+        .float-bottom { left: 12px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a href="#top" class="brand">
+          <span class="brand-mark">YL</span>
+          <span>Yashmit Laptop</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#categories">Categories</a>
+          <a href="#products">Products</a>
+          <a href="#custom-build">Custom build</a>
+          <a href="#agent">Advisor</a>
+          <a href="#order">Order</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Premium tech store</span>
+            <h1>Smart laptops, gaming power, and custom PC solutions for every lifestyle.</h1>
+            <p>
+              Yashmit Laptop helps students, creators, professionals, and gamers choose the right laptop,
+              desktop, SSD, RAM, and accessories with honest advice and trusted support.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#products">Shop now</a>
+              <a class="btn btn-secondary" href="#agent">Talk to advisor</a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="stat-box">
+                <strong>500+</strong>
+                <span>Products available</span>
+              </div>
+              <div class="stat-box">
+                <strong>4.9/5</strong>
+                <span>Happy customers</span>
+              </div>
+              <div class="stat-box">
+                <strong>24/7</strong>
+                <span>Expert support</span>
+              </div>
+            </div>
+
+            <div class="luxury-strip" aria-label="Brand highlights">
+              <span class="strip-pill">Premium Warranty</span>
+              <span class="strip-pill">Free Setup</span>
+              <span class="strip-pill">Trusted Delivery</span>
+              <span class="strip-pill">Same-Day Support</span>
+            </div>
+
+            <div class="brand-row" aria-label="Partner platforms">
+              <div class="brand-box">MSI</div>
+              <div class="brand-box">ASUS</div>
+              <div class="brand-box">HP</div>
+              <div class="brand-box">Dell</div>
+              <div class="brand-box">Lenovo</div>
+              <div class="brand-box">Intel</div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="showcase">
+              <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1200&q=80" alt="Premium laptop showroom" />
+            </div>
+            <div class="float-box float-top">
+              <span class="eyebrow" style="margin-bottom: 4px; display: inline-block;">Best seller</span>
+              <strong>RTX 4060</strong>
+              <span>Gaming laptop</span>
+            </div>
+            <div class="float-box float-bottom">
+              <span class="eyebrow" style="margin-bottom: 4px; display: inline-block;">From</span>
+              <strong>$899</strong>
+              <span>Ready to ship</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Overall overview</span>
+            <h2>Built for performance, comfort, and premium experience</h2>
+          </div>
+
+          <div class="spotlight-layout">
+            <div class="spotlight-visual">
+              <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=1200&q=80" alt="3D product studio shot" />
+              <div class="spotlight-badge">
+                <div class="eyebrow" style="margin-bottom: 4px; display: inline-block;">Performance</div>
+                <strong>Up to 8K</strong>
+              </div>
+            </div>
+
+            <div>
+              <span class="eyebrow">Luxury engineering</span>
+              <h3>Premium choice for work, play, and powerful everyday performance.</h3>
+              <div class="spotlight-list">
+                <div class="mini-check">
+                  <span>✓</span>
+                  <div>
+                    <strong>High-end display quality</strong>
+                    <p>Ultra-sharp panels with vibrant color, smooth motion, and immersive contrast.</p>
+                  </div>
+                </div>
+                <div class="mini-check">
+                  <span>✓</span>
+                  <div>
+                    <strong>Advanced thermal control</strong>
+                    <p>Cooler performance, quieter operation, and more reliable power during heavy use.</p>
+                  </div>
+                </div>
+                <div class="mini-check">
+                  <span>✓</span>
+                  <div>
+                    <strong>Designed for long-term confidence</strong>
+                    <p>Premium build quality, warranty support, and guided setup from product experts.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Product studio</span>
+            <h2>Luxury hardware, captured in a real showroom style</h2>
+          </div>
+
+          <div class="studio-gallery">
+            <div class="gallery-card">
+              <img src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?auto=format&fit=crop&w=1200&q=80" alt="Laptop product closeup" />
+            </div>
+            <div class="gallery-stack">
+              <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=900&q=80" alt="Gaming desktop closeup" />
+              </div>
+              <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?auto=format&fit=crop&w=900&q=80" alt="Premium workstation" />
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-stack" style="margin-top: 22px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px;">
+            <div class="gallery-card">
+              <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=80" alt="Premium laptop display" style="height: 220px;" />
+            </div>
+            <div class="gallery-card">
+              <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=80" alt="Modern gaming laptop" style="height: 220px;" />
+            </div>
+            <div class="gallery-card">
+              <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=900&q=80" alt="Business laptop front view" style="height: 220px;" />
+            </div>
+            <div class="gallery-card">
+              <img src="https://images.unsplash.com/photo-1555618568-6349d355c88f?auto=format&fit=crop&w=900&q=80" alt="High-end graphics card" style="height: 220px;" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="brands">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Trusted quality</span>
+            <h2>Made for every platform, every profession, every setup</h2>
+            <p>We offer premium solutions across different devices, brands, workflows, and performance levels so each customer gets the right equipment.</p>
+          </div>
+
+          <div class="trust-grid">
+            <div class="trust-box">
+              <strong>1000+</strong>
+              <span>Systems delivered</span>
+            </div>
+            <div class="trust-box">
+              <strong>12+</strong>
+              <span>Years of experience</span>
+            </div>
+            <div class="trust-box">
+              <strong>24/7</strong>
+              <span>Expert guidance</span>
+            </div>
+            <div class="trust-box">
+              <strong>98%</strong>
+              <span>Repeat buyers</span>
+            </div>
+          </div>
+
+          <div class="platform-strip" aria-label="Supported platforms">
+            <span class="platform-pill">Windows Laptops</span>
+            <span class="platform-pill">Gaming PCs</span>
+            <span class="platform-pill">Creator Workstations</span>
+            <span class="platform-pill">Business Machines</span>
+            <span class="platform-pill">Custom PC Builds</span>
+            <span class="platform-pill">Accessories & Upgrades</span>
+          </div>
+
+          <div class="detail-grid">
+            <div class="detail-card">
+              <strong>Business Users</strong>
+              <p>Fast multitasking, lightweight form factors, strong battery life, and business-grade reliability.</p>
+              <ul>
+                <li>Office-ready performance</li>
+                <li>Secure and portable</li>
+                <li>Fast charging support</li>
+              </ul>
+            </div>
+            <div class="detail-card">
+              <strong>Students</strong>
+              <p>Affordable power, comfortable typing, slim design, and dependable performance for study needs.</p>
+              <ul>
+                <li>Lightweight portability</li>
+                <li>Excellent battery backup</li>
+                <li>Smart everyday performance</li>
+              </ul>
+            </div>
+            <div class="detail-card">
+              <strong>Creators</strong>
+              <p>High-speed GPU, responsive display, and excellent output for editing, design, and video work.</p>
+              <ul>
+                <li>4K visuals supported</li>
+                <li>More RAM and storage</li>
+                <li>Fast rendering workflow</li>
+              </ul>
+            </div>
+            <div class="detail-card">
+              <strong>Gamers</strong>
+              <p>High refresh rate screens, RTX graphics, and strong cooling for immersive, smooth gameplay.</p>
+              <ul>
+                <li>Ultra-smooth display</li>
+                <li>High FPS performance</li>
+                <li>Premium thermal design</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Quick comparison</span>
+            <h2>Choose the right performance level for your need</h2>
+          </div>
+
+          <div class="compare-table-wrap">
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Best for</th>
+                  <th>Typical specs</th>
+                  <th>Recommended use</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Student Laptop</td>
+                  <td>Study & daily tasks</td>
+                  <td>Intel i5, 16GB RAM, 512GB SSD</td>
+                  <td>Classes, assignment work, browsing, presentations</td>
+                </tr>
+                <tr>
+                  <td>Business Laptop</td>
+                  <td>Office work</td>
+                  <td>Intel i5/i7, 16GB–32GB RAM, 512GB–1TB SSD</td>
+                  <td>Meetings, spreadsheets, secure multitasking</td>
+                </tr>
+                <tr>
+                  <td>Creator Laptop</td>
+                  <td>Editing & design</td>
+                  <td>RTX GPU, 32GB RAM, 1TB SSD</td>
+                  <td>Photoshop, editing, rendering, design workflows</td>
+                </tr>
+                <tr>
+                  <td>Gaming PC</td>
+                  <td>High-performance gaming</td>
+                  <td>RTX 4060/4070, Ryzen 7, 32GB RAM</td>
+                  <td>Gaming, streaming, multitasking, performance-heavy tasks</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Support & service</span>
+            <h2>We guide you before, during, and after the sale</h2>
+          </div>
+
+          <div class="support-grid">
+            <div class="support-card">
+              <strong>Expert guidance</strong>
+              <p>We help you choose laptops based on your actual work, budget, and future needs.</p>
+            </div>
+            <div class="support-card">
+              <strong>Warranty help</strong>
+              <p>Get support for installation, setup, product care, and technical troubleshooting.</p>
+            </div>
+            <div class="support-card">
+              <strong>Fast ordering</strong>
+              <p>Place your order through WhatsApp and receive quick response and confirmation.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="upgrade-cta">
+        <div class="container">
+          <div class="cta-final">
+            <div>
+              <span class="eyebrow">Your next upgrade</span>
+              <h3>Find the right laptop or PC today and buy with confidence.</h3>
+            </div>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#products">Browse products</a>
+              <a class="btn btn-secondary" href="https://wa.me/919876543210?text=Hello%20Yashmit%20Laptop%2C%20I%20want%20expert%20help%20with%20my%20next%20purchase." target="_blank">Speak to expert</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="highlights">
+        <div class="container">
+          <div class="keynote-wrap reveal">
+            <div class="keynote-panel">
+              <span class="eyebrow">Apple-keynote energy</span>
+              <h2>Engineered for people who expect more.</h2>
+              <p style="margin-top: 16px; max-width: 620px;">
+                Every Yashmit Laptop is chosen to blend premium design, serious power, and everyday confidence — built for work, content creation, and gaming without compromise.
+              </p>
+
+              <div class="mini-grid">
+                <div class="mini-card">
+                  <strong>Power</strong>
+                  <p>High-speed chips, strong graphics, and smooth multitasking for demanding work.</p>
+                </div>
+                <div class="mini-card">
+                  <strong>Display</strong>
+                  <p>Sharper detail, richer color, and immersive clarity for every task.</p>
+                </div>
+                <div class="mini-card">
+                  <strong>Build</strong>
+                  <p>Premium fit and finish that makes every machine feel premium and modern.</p>
+                </div>
+                <div class="mini-card">
+                  <strong>Support</strong>
+                  <p>Real guidance, fast assistance, and expert recommendations from day one.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="feature-visual reveal">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" alt="Premium product presentation" />
+              <div class="floating-note">
+                <div class="eyebrow" style="margin-bottom: 4px; display: inline-block;">Premium choice</div>
+                <strong>Built to impress</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Premium craftsmanship</span>
+            <h2>Design-led technology for a more elevated everyday experience</h2>
+          </div>
+
+          <div class="spotlight-layout">
+            <div>
+              <span class="eyebrow">Flagship quality</span>
+              <h3>Every device is curated to feel fast, polished, and genuinely premium.</h3>
+              <div class="spotlight-list">
+                <div class="mini-check">
+                  <span>✓</span>
+                  <div>
+                    <strong>Luxury finish</strong>
+                    <p>Crafted with a high-end look, premium materials, and refined performance.</p>
+                  </div>
+                </div>
+                <div class="mini-check">
+                  <span>✓</span>
+                  <div>
+                    <strong>Precision performance</strong>
+                    <p>Built for multitasking, smooth workflow, and an elite user experience.</p>
+                  </div>
+                </div>
+                <div class="mini-check">
+                  <span>✓</span>
+                  <div>
+                    <strong>Brand trust</strong>
+                    <p>Professional support, transparent advice, and consistent customer satisfaction.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="spotlight-visual" style="min-height: 520px;">
+              <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=1200&q=80" alt="Luxury workstation" />
+              <div class="spotlight-badge" style="left: 18px; right: auto;">
+                <div class="eyebrow" style="margin-bottom: 4px; display: inline-block;">Elite setup</div>
+                <strong>Ultra 4K</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="categories">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Top categories</span>
+            <h2>Choose what fits your work and lifestyle</h2>
+            <p>Whether you need a laptop for study, design, gaming, office work, or a custom setup, we have the right product for you.</p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="feature-icon">💻</div>
+              <h3>Business Laptops</h3>
+              <p>Lightweight, fast, and efficient devices for office work, meetings, and daily productivity.</p>
+              <ul>
+                <li>Intel Core i5</li>
+                <li>16GB RAM</li>
+                <li>Fast SSD</li>
+              </ul>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon">🎮</div>
+              <h3>Gaming Laptops</h3>
+              <p>High-performance gaming rigs for smooth fps, 144Hz displays, and long gaming sessions.</p>
+              <ul>
+                <li>RTX graphics</li>
+                <li>144Hz display</li>
+                <li>Advanced cooling</li>
+              </ul>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon">🧑‍💻</div>
+              <h3>Creator Laptops</h3>
+              <p>Built for editing, design, VFX, rendering, and content creation work.</p>
+              <ul>
+                <li>Powerful CPU</li>
+                <li>32GB RAM</li>
+                <li>Large SSD</li>
+              </ul>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon">🧩</div>
+              <h3>Custom PC Parts</h3>
+              <p>Upgrade your desktop with SSDs, RAM, motherboard, CPU, GPU, and cooling parts.</p>
+              <ul>
+                <li>DDR4 / DDR5</li>
+                <li>1TB / 2TB SSD</li>
+                <li>Monitors & accessories</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="products">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Featured collection</span>
+            <h2>Popular laptops and desktop systems</h2>
+          </div>
+
+          <div class="product-grid">
+            <article class="product-card">
+              <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=900&q=80" alt="Business laptop" />
+              <div class="product-info">
+                <span class="tag">Business</span>
+                <h3>Yashmit EliteBook 14</h3>
+                <p>Business-class laptop with fast performance, secure design, and all-day productivity.</p>
+                <div class="meta-row">
+                  <span class="price">$899</span>
+                  <span class="badge" style="padding: 7px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--white);">14 inch</span>
+                </div>
+                <div class="specs">
+                  <span>Intel i5</span>
+                  <span>16GB RAM</span>
+                  <span>512GB SSD</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn btn-primary add-item" data-name="Yashmit EliteBook 14" data-price="899">Add to cart</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=80" alt="Gaming laptop" />
+              <div class="product-info">
+                <span class="tag">Gaming</span>
+                <h3>Yashmit Predator X</h3>
+                <p>For serious gamers who want smooth graphics, speed, and premium build quality.</p>
+                <div class="meta-row">
+                  <span class="price">$1,499</span>
+                  <span class="badge" style="padding: 7px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--white);">RTX 4060</span>
+                </div>
+                <div class="specs">
+                  <span>144Hz</span>
+                  <span>16GB RAM</span>
+                  <span>1TB SSD</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn btn-primary add-item" data-name="Yashmit Predator X" data-price="1499">Add to cart</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=900&q=80" alt="Gaming desktop" />
+              <div class="product-info">
+                <span class="tag">Desktop</span>
+                <h3>Yashmit Apex Gaming PC</h3>
+                <p>Build for high FPS gaming and livestreaming with premium cooling and design.</p>
+                <div class="meta-row">
+                  <span class="price">$1,699</span>
+                  <span class="badge" style="padding: 7px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--white);">RTX 4070</span>
+                </div>
+                <div class="specs">
+                  <span>Ryzen 7</span>
+                  <span>32GB RAM</span>
+                  <span>1TB SSD</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn btn-primary add-item" data-name="Yashmit Apex Gaming PC" data-price="1699">Add to cart</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=900&q=80" alt="Creator workstation" />
+              <div class="product-info">
+                <span class="tag">Creator</span>
+                <h3>Yashmit Vision Pro</h3>
+                <p>High-end creator workstation with powerful graphics, smooth editing, and premium performance.</p>
+                <div class="meta-row">
+                  <span class="price">$1,999</span>
+                  <span class="badge" style="padding: 7px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--white);">4K</span>
+                </div>
+                <div class="specs">
+                  <span>RTX 4080</span>
+                  <span>32GB RAM</span>
+                  <span>2TB SSD</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn btn-primary add-item" data-name="Yashmit Vision Pro" data-price="1999">Add to cart</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="custom-build">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">PC building essentials</span>
+            <h2>Everything needed to build a custom PC</h2>
+            <p>From the CPU and motherboard to storage, graphics, casing, and cooling, here is the complete list of parts needed to build a powerful desktop system.</p>
+          </div>
+
+          <div class="build-grid">
+            <article class="build-card">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Central processing unit" />
+              <div class="build-card-content">
+                <span class="tag">CPU</span>
+                <h3>Processor</h3>
+                <p>The brain of the PC. Choose Intel Core i5/i7 or Ryzen 5/7 depending on your workload and budget.</p>
+                <div class="build-tags">
+                  <span>Intel</span>
+                  <span>AMD</span>
+                  <span>Gaming</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card">
+              <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=900&q=80" alt="Motherboard" />
+              <div class="build-card-content">
+                <span class="tag">Motherboard</span>
+                <h3>Motherboard</h3>
+                <p>Connects the processor, RAM, GPU, storage, and expansion components in one stable platform.</p>
+                <div class="build-tags">
+                  <span>DDR4</span>
+                  <span>DDR5</span>
+                  <span>WiFi</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card">
+              <img src="https://images.unsplash.com/photo-1555618568-6349d355c88f?auto=format&fit=crop&w=900&q=80" alt="Graphics card" />
+              <div class="build-card-content">
+                <span class="tag">GPU</span>
+                <h3>Graphics Card</h3>
+                <p>Essential for gaming, 3D work, design, and video editing. A strong GPU drives visual performance and smooth frame rates.</p>
+                <div class="build-tags">
+                  <span>RTX</span>
+                  <span>4K</span>
+                  <span>Creator</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card">
+              <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=900&q=80" alt="Memory kit" />
+              <div class="build-card-content">
+                <span class="tag">RAM</span>
+                <h3>Memory</h3>
+                <p>16GB is ideal for everyday use, while 32GB is better for gaming, editing, multitasking and heavy workloads.</p>
+                <div class="build-tags">
+                  <span>16GB</span>
+                  <span>32GB</span>
+                  <span>DDR5</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card">
+              <img src="https://images.unsplash.com/photo-1565610222536-ef125c59da2b?auto=format&fit=crop&w=900&q=80" alt="SSD storage" />
+              <div class="build-card-content">
+                <span class="tag">Storage</span>
+                <h3>SSD / HDD</h3>
+                <p>Fast storage improves boot time, app loading, and general responsiveness. NVMe SSDs are ideal for performance-focused systems.</p>
+                <div class="build-tags">
+                  <span>1TB</span>
+                  <span>2TB</span>
+                  <span>NVMe</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card">
+              <img src="https://images.unsplash.com/photo-1621122804736-cb0b5a4a1a56?auto=format&fit=crop&w=900&q=80" alt="Power supply" />
+              <div class="build-card-content">
+                <span class="tag">PSU</span>
+                <h3>Power Supply</h3>
+                <p>A quality PSU keeps every component stable, protected, and efficient. A reliable power unit is essential for long-term safety.</p>
+                <div class="build-tags">
+                  <span>650W</span>
+                  <span>750W</span>
+                  <span>80+ Gold</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card">
+              <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=900&q=80" alt="Computer case" />
+              <div class="build-card-content">
+                <span class="tag">Case</span>
+                <h3>PC Case</h3>
+                <p>Looks good, keeps airflow clean, and gives enough room for expansion and high-performance cooling hardware.</p>
+                <div class="build-tags">
+                  <span>Airflow</span>
+                  <span>RGB</span>
+                  <span>Mid Tower</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="build-card">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Cooling system" />
+              <div class="build-card-content">
+                <span class="tag">Cooling</span>
+                <h3>Cooling</h3>
+                <p>Air coolers or liquid cooling reduce heat, improve performance, and keep your PC stable during long gaming or editing sessions.</p>
+                <div class="build-tags">
+                  <span>Air</span>
+                  <span>Liquid</span>
+                  <span>Quiet</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="custom">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Custom fit</span>
+            <h2>Let us guide you to the perfect setup</h2>
+          </div>
+
+          <div class="for-you">
+            <article class="info-card">
+              <h3>For students</h3>
+              <p>Budget-friendly laptops that are easy to carry, fast to use, and strong enough for classes and assignments.</p>
+              <div class="checklist">
+                <span>✓ Lightweight design</span>
+                <span>✓ 16GB RAM</span>
+                <span>✓ Long battery</span>
+              </div>
+            </article>
+
+            <article class="info-card">
+              <h3>For creators</h3>
+              <p>High-performance systems with more memory and stronger graphics for editing and design tasks.</p>
+              <div class="checklist">
+                <span>✓ 32GB RAM</span>
+                <span>✓ 2TB SSD</span>
+                <span>✓ 4K support</span>
+              </div>
+            </article>
+
+            <article class="info-card">
+              <h3>For gamers</h3>
+              <p>High refresh-rate gaming laptops and desktops for the best performance and visual quality.</p>
+              <div class="checklist">
+                <span>✓ RTX graphics</span>
+                <span>✓ Cooling system</span>
+                <span>✓ RGB build style</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="agent">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Personal buying guide</span>
+            <h2>Meet your premium tech advisor</h2>
+            <p>Every buyer gets direct guidance from a real product specialist who matches the right laptop, gaming setup, or custom PC to your budget and goals.</p>
+          </div>
+
+          <div class="advisor-layout">
+            <div class="agent-card advisor-visual">
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80" alt="Premium tech advisor assisting a customer" />
+              <div class="floating-note">
+                <div class="eyebrow" style="margin-bottom: 4px; display: inline-block;">Live support</div>
+                <strong>1-on-1 guidance</strong>
+              </div>
+            </div>
+
+            <div class="agent-card">
+              <span class="eyebrow">Yashmit advisor</span>
+              <h3>Need help choosing a laptop or PC that truly fits you?</h3>
+              <p>
+                Our advisor helps students, creators, professionals, and gamers compare the best options from budget picks to flagship premium machines. We listen to your workflow, then recommend the right system with clarity and confidence.
+              </p>
+
+              <div class="advisor-badges">
+                <span>Budget planning</span>
+                <span>Performance matching</span>
+                <span>Warranty help</span>
+                <span>Setup advice</span>
+              </div>
+
+              <div class="advisor-points">
+                <div class="advisor-point">
+                  <strong>Smart buying guidance</strong>
+                  <p>We recommend based on work style, long-term usage, and exact performance needs.</p>
+                </div>
+                <div class="advisor-point">
+                  <strong>Custom PC planning</strong>
+                  <p>From CPU and GPU to cooling and storage, we help you decide what matters most in your build.</p>
+                </div>
+                <div class="advisor-point">
+                  <strong>After-sale support</strong>
+                  <p>We help with setup, delivery questions, upgrades, and future product recommendations.</p>
+                </div>
+              </div>
+
+              <div class="agent-meta">
+                <div class="avatar">YA</div>
+                <div>
+                  <strong>Yashmit Agent</strong><br />
+                  <span style="color: var(--muted);">Real recommendations • honest advice</span>
+                </div>
+              </div>
+
+              <div class="hero-actions" style="margin-top: 22px;">
+                <a class="btn btn-primary" href="https://wa.me/919876543210?text=Hello%20Yashmit%20Laptop%2C%20I%20need%20a%20premium%20recommendation%20for%20my%20next%20laptop%20or%20PC." target="_blank">Chat with advisor</a>
+                <a class="btn btn-soft" href="#order">Book your order</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="process">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">How it works</span>
+            <h2>From discovery to delivery in just a few steps</h2>
+          </div>
+
+          <div class="process-grid">
+            <div class="process-card">
+              <div class="step-number">1</div>
+              <h3>Choose your setup</h3>
+              <p>Pick the exact laptop, desktop, or upgrade that suits your work and budget.</p>
+            </div>
+            <div class="process-card">
+              <div class="step-number">2</div>
+              <h3>Talk with advisor</h3>
+              <p>Get expert guidance on specs, performance, and value before you buy.</p>
+            </div>
+            <div class="process-card">
+              <div class="step-number">3</div>
+              <h3>Confirm order</h3>
+              <p>Complete your order with a simple payment flow and fast communication.</p>
+            </div>
+            <div class="process-card">
+              <div class="step-number">4</div>
+              <h3>Receive support</h3>
+              <p>Enjoy setup support, delivery updates, and post-purchase assistance.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="deals">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Best deals</span>
+            <h2>Affordable upgrades for your setup</h2>
+          </div>
+
+          <div class="deal-box">
+            <div>
+              <span class="eyebrow" style="margin-bottom: 10px; display: inline-block;">This week</span>
+              <h3>Save up to 20% on RAM + SSD combo packs</h3>
+            </div>
+            <a class="btn btn-primary" href="#order">Claim now</a>
+          </div>
+
+          <div class="premium-banner" style="margin-top: 22px;">
+            <div>
+              <span class="eyebrow">Why choose us</span>
+              <h3>Built for people who want premium performance without compromise.</h3>
+            </div>
+            <div class="banner-metrics">
+              <div class="stat-box">
+                <strong>12+</strong>
+                <span>years experience</span>
+              </div>
+              <div class="stat-box">
+                <strong>99.2%</strong>
+                <span>customer satisfaction</span>
+              </div>
+              <div class="stat-box">
+                <strong>3-step</strong>
+                <span>fast delivery flow</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="order">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Order system</span>
+            <h2>Place your order safely and quickly</h2>
+            <p>Choose items, fill in details, and place your order by WhatsApp or secure online payment flow.</p>
+          </div>
+
+          <div class="order-layout">
+            <div class="panel">
+              <h3>Customer information</h3>
+              <form class="order-form" id="orderForm">
+                <div class="field-row">
+                  <div class="field">
+                    <label for="name">Full name</label>
+                    <input id="name" type="text" placeholder="Your full name" required />
+                  </div>
+                  <div class="field">
+                    <label for="phone">Phone number</label>
+                    <input id="phone" type="tel" placeholder="+91 98765 43210" required />
+                  </div>
+                </div>
+
+                <div class="field-row">
+                  <div class="field">
+                    <label for="city">City</label>
+                    <input id="city" type="text" placeholder="Your city" required />
+                  </div>
+                  <div class="field">
+                    <label for="state">State</label>
+                    <input id="state" type="text" placeholder="Your state" required />
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="address">Delivery address</label>
+                  <textarea id="address" placeholder="Street address, area, landmark" required></textarea>
+                </div>
+
+                <div class="field">
+                  <label for="notes">Order notes</label>
+                  <textarea id="notes" placeholder="Example: prefer gaming model, need warranty, want setup help"></textarea>
+                </div>
+              </form>
+            </div>
+
+            <div class="panel">
+              <h3>Order summary</h3>
+              <div class="summary-list" id="cartList">
+                <div class="summary-item">
+                  <span>No items added yet</span>
+                  <strong>$0</strong>
+                </div>
+              </div>
+              <div class="total-row">
+                <span>Total</span>
+                <span id="totalPrice">$0</span>
+              </div>
+
+              <h3 style="margin-top: 22px; margin-bottom: 12px;">Payment method</h3>
+              <div class="payment-grid">
+                <button class="payment-option active" type="button" data-method="UPI">UPI</button>
+                <button class="payment-option" type="button" data-method="Card">Card</button>
+                <button class="payment-option" type="button" data-method="Cash on Delivery">COD</button>
+              </div>
+
+              <div class="bank-box" id="paymentInfoBox">
+                <strong>UPI secure payment</strong>
+                <p>UPI ID: yashmitlaptop@upi</p>
+              </div>
+
+              <div class="cta-box">
+                <div>
+                  <strong>Pay & confirm order</strong>
+                  <p>Fast buying experience with support</p>
+                </div>
+                <button class="btn btn-success" id="payBtn" type="button">Pay now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="reviews">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Customer love</span>
+            <h2>What people say about Yashmit Laptop</h2>
+          </div>
+
+          <div class="reviews-grid">
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>“Really helpful team, excellent advice, and the laptop quality was exactly what I needed for my studies.”</p>
+              <h4 style="margin-top: 14px;">Amit S.</h4>
+            </article>
+
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>“I needed a gaming laptop and the advisor recommended the perfect model. The whole process was smooth.”</p>
+              <h4 style="margin-top: 14px;">Rohit P.</h4>
+            </article>
+
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>“Good pricing, fast support, and a clean system for ordering. Highly recommended for custom PC work.”</p>
+              <h4 style="margin-top: 14px;">Nisha K.</h4>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">FAQ</span>
+            <h2>Common buying questions</h2>
+          </div>
+
+          <div class="faq-grid">
+            <div class="faq-item">
+              <strong>Which laptop is best for students?</strong>
+              <p>A 14-inch business or student laptop with 16GB RAM and SSD is ideal for lectures, assignments, and everyday use.</p>
+            </div>
+
+            <div class="faq-item">
+              <strong>Is gaming laptop worth it?</strong>
+              <p>Yes, if you want high-performance graphics, smooth games, and better multitasking for streaming or editing.</p>
+            </div>
+
+            <div class="faq-item">
+              <strong>Should I buy a desktop or laptop?</strong>
+              <p>Choose a laptop for portability and a desktop for better value, stronger graphics, and upgrade flexibility.</p>
+            </div>
+
+            <div class="faq-item">
+              <strong>Do you support custom PC builds?</strong>
+              <p>Yes. We help you choose the right CPU, GPU, RAM, SSD, motherboard, and cooling setup based on your budget.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>© 2026 Yashmit Laptop</div>
+        <div>Gaming laptops • Business laptops • Custom PCs • Accessories</div>
+        <div>WhatsApp: +91 98765 43210</div>
+      </div>
+    </footer>
+
+    <script>
+      const cart = [];
+      const cartList = document.getElementById('cartList');
+      const totalPriceEl = document.getElementById('totalPrice');
+      const payBtn = document.getElementById('payBtn');
+      const paymentOptions = document.querySelectorAll('.payment-option');
+      const paymentInfoBox = document.getElementById('paymentInfoBox');
+      let selectedPayment = 'UPI';
+
+      function renderCart() {
+        if (!cart.length) {
+          cartList.innerHTML = `
+            <div class="summary-item">
+              <span>No items added yet</span>
+              <strong>$0</strong>
+            </div>
+          `;
+          totalPriceEl.textContent = '$0';
+          return;
+        }
+
+        let total = 0;
+        cartList.innerHTML = cart.map(item => {
+          total += item.price;
+          return `
+            <div class="summary-item">
+              <span>${item.name}</span>
+              <strong>$${item.price}</strong>
+            </div>
+          `;
+        }).join('');
+
+        totalPriceEl.textContent = `$${total}`;
+      }
+
+      document.querySelectorAll('.add-item').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const name = btn.dataset.name;
+          const price = Number(btn.dataset.price);
+          cart.push({ name, price });
+          renderCart();
+          btn.textContent = 'Added';
+          btn.disabled = true;
+          btn.style.opacity = '0.85';
+        });
+      });
+
+      document.querySelectorAll('.tilt-card, .product-card').forEach(card => {
+        card.addEventListener('mousemove', (event) => {
+          const rect = card.getBoundingClientRect();
+          const x = event.clientX - rect.left;
+          const y = event.clientY - rect.top;
+          const rotateY = ((x / rect.width) - 0.5) * 10;
+          const rotateX = (0.5 - (y / rect.height)) * 10;
+          card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = '';
+        });
+      });
+
+      const revealEls = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.15 });
+
+      revealEls.forEach(el => observer.observe(el));
+
+      paymentOptions.forEach(option => {
+        option.addEventListener('click', () => {
+          paymentOptions.forEach(opt => opt.classList.toggle('active', opt === option));
+          selectedPayment = option.dataset.method;
+
+          if (selectedPayment === 'UPI') {
+            paymentInfoBox.innerHTML = `
+              <strong>UPI secure payment</strong>
+              <p>UPI ID: yashmitlaptop@upi</p>
+            `;
+          } else if (selectedPayment === 'Card') {
+            paymentInfoBox.innerHTML = `
+              <strong>Card payment</strong>
+              <p>Visa, MasterCard, and RuPay supported. Secure gateway enabled.</p>
+            `;
+          } else {
+            paymentInfoBox.innerHTML = `
+              <strong>Cash on Delivery</strong>
+              <p>Pay when your order reaches your address.</p>
+            `;
+          }
+        });
+      });
+
+      payBtn.addEventListener('click', () => {
+        const name = document.getElementById('name').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const city = document.getElementById('city').value.trim();
+        const state = document.getElementById('state').value.trim();
+        const address = document.getElementById('address').value.trim();
+        const notes = document.getElementById('notes').value.trim();
+
+        if (!name || !phone || !city || !state || !address) {
+          alert('Please complete all required customer details before ordering.');
+          return;
+        }
+
+        if (!cart.length) {
+          alert('Please add at least one item before ordering.');
+          return;
+        }
+
+        const total = cart.reduce((sum, item) => sum + item.price, 0);
+        const message = [
+          'Hello Yashmit Laptop, I want to place an order.',
+          '',
+          'Customer Details:',
+          `Name: ${name}`,
+          `Phone: ${phone}`,
+          `City: ${city}`,
+          `State: ${state}`,
+          `Address: ${address}`,
+          `Payment: ${selectedPayment}`,
+          '',
+          'Products:',
+          ...cart.map(item => `- ${item.name}: $${item.price}`),
+          '',
+          `Total: $${total}`,
+          `Notes: ${notes || 'No extra notes'}`,
+          '',
+          'Please confirm stock and delivery.'
+        ].join('\n');
+
+        const encoded = encodeURIComponent(message);
+        const whatsappNumber = '919876543210';
+        window.open(`https://wa.me/${whatsappNumber}?text=${encoded}`, '_blank');
+      });
+    </script>
+  </body>
+</html>
